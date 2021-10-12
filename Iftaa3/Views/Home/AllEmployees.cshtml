@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Employee>
+@{
+    ViewData["Title"] = "All Employees";
+}
+<a asp-action="CreateEmployee" class="btn btn-success">Create Employee</a>
+<h1>All Employees</h1>
+<table class="table table-bordered">
+    <tr>
+        <td>@Html.DisplayNameFor(model=>model.EmployeeName) </td>
+        <td>@Html.DisplayNameFor(model=>model.Department.DepartmentName) </td>
+    </tr>
+    @foreach (var emp in Model)
+    {
+        <tr>
+            <td> @emp.EmployeeName</td>
+            <td> @emp.Department.DepartmentName</td>
+        </tr>
+    }
+</table>
+

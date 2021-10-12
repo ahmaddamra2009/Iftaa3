@@ -1,0 +1,30 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "CreateBook";
+}
+
+<h1>Create Book</h1>
+<form method="post" asp-action="CreateBook">
+    <table class="table table-bordered">
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.BookName)</td>
+            <td><input asp-for="BookName" class="form-control" /> </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.AuthorId)</td>
+            <td><select asp-for="AuthorId" asp-items="ViewBag.Auhtors"></select></td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td><select id="catID" multiple name="catID" asp-items="ViewBag.Categories"></select></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="btn"  value="Create" class="btn btn-success" />
+                <input type="submit" name="btn"  value="Delete" class="btn btn-success" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+

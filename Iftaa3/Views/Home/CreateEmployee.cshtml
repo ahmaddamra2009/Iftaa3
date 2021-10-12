@@ -1,0 +1,24 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "CreateEmployee";
+}
+
+<h1>Create Employee</h1>
+<form method="post" asp-action="Create" asp-controller="Home">
+    <table class="table table-bordered">
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.EmployeeName)</td>
+            <td><input asp-for="EmployeeName" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.DepartmentId)</td>
+            <td><select asp-for="DepartmentId" asp-items="ViewBag.DepartmentNames" class="form-control"></select> </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="name" value="Create" class="btn btn-primary" />
+            </td>
+        </tr>
+    </table>
+
+</form>

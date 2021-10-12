@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "AllData1";
+}
+
+<h1>AllData1</h1>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>Book Name</td>
+        <td>Author Name</td>
+    </tr>
+    @foreach (Book item in ViewBag.Books)
+    {
+        <tr>
+            <td>@item.BookName</td>
+            <td>@item.Author.AuthorName</td>
+        </tr>
+
+    }
+</table>
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>Employee Name </td>
+        <td>Department Name </td>
+    </tr>
+    @foreach (Employee emp in ViewBag.Employees)
+    {
+        <tr>
+            <td> @emp.EmployeeName</td>
+            <td> @emp.Department.DepartmentName</td>
+        </tr>
+    }
+</table>
+
+

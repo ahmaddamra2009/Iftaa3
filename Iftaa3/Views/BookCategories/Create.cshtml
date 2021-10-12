@@ -1,0 +1,24 @@
+﻿@model BookCategory
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<form asp-action="Create">
+    <table class="table table-bordered">
+        <tr>
+            <td>Book Name</td>
+            <td><select asp-for="BookId" asp-items="ViewBag.Books" class="form-control"></select> </td>
+        </tr>
+        <tr>
+            <td>Book Name</td>
+            <td><select asp-for="CategoryId" asp-items="ViewBag.cat" class="form-control"></select> </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="name" value="Create" />
+            </td>
+        </tr>
+    </table>
+
+</form>
