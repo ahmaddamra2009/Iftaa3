@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Iftaa3.Models.ViewModels
 {
-    public class LoginViewModel
+    public class LoginStaticViewModel
     {
         [Required]
         public string UserName { get; set; }

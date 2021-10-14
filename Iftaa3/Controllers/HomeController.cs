@@ -88,23 +88,23 @@ namespace Iftaa3.Controllers
 
 
 
-        public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Login(LoginViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                User user = new User { UserName = model.UserName, Password = model.Password };
+        //public IActionResult Login()
+        //{
+        //    return View();
+        //}
+        //[HttpPost]
+        //public IActionResult Login(LoginViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        User user = new User { UserName = model.UserName, Password = model.Password };
 
-                db.Users.Add(user);
-                db.SaveChanges();
-                return RedirectToAction("AllEmployees");
-            }
-            return View(model);
+        //        db.Users.Add(user);
+        //        db.SaveChanges();
+        //        return RedirectToAction("AllEmployees");
+        //    }
+        //    return View(model);
           
-        }
+        //}
     }
 }
